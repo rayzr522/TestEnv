@@ -22,7 +22,7 @@ public class Main {
 	private File					file;
 	private HashMap<String, String>	props	= new HashMap<String, String>();
 
-	public static final File		FOLDER	= new File("/Users/PeterBlood/Desktop/Temp/");
+	public static final File		FOLDER	= new File("~/Desktop/Temp/");
 
 	public Main() {
 
