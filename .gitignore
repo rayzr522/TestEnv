@@ -4,3 +4,9 @@
 .project
 .settings
 .metadata
+*.jardesc
+.idea
+.recommenders
+*.iml
+*.eml
+META-INF
