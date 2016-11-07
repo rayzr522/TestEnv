@@ -6,17 +6,17 @@ import java.util.regex.Pattern;
 
 public class Regex {
 
-	public static int numMatches(String text, String regex) {
+    public static int numMatches(String text, String regex) {
 
-		Matcher matcher = Pattern.compile(regex).matcher(text);
-		int count = 0;
+        Matcher matcher = Pattern.compile(regex).matcher(text);
+        int count = 0;
 
-		while (matcher.find()) {
-			count++;
-		}
+        while (matcher.find()) {
+            count++;
+        }
 
-		return count;
+        return count;
 
-	}
+    }
 
 }
