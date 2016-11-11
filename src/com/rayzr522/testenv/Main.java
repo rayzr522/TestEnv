@@ -1,6 +1,7 @@
 
 package com.rayzr522.testenv;
 
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -11,6 +12,11 @@ import com.google.common.base.Strings;
 public class Main {
 
     public Main() {
+
+        System.out.println("Date: " + new DateCodeFormat().format(new Date()));
+
+        // Breakpoint
+        System.exit(0);
 
         Pattern pattern = Pattern.compile("(_([^_]+)_)+");
 
@@ -79,6 +85,7 @@ public class Main {
         System.out.println(obj);
     }
 
+    @SuppressWarnings("unused")
     public static void main(String[] args) {
 
         log("Creating application");
