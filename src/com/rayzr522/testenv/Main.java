@@ -1,7 +1,11 @@
 
 package com.rayzr522.testenv;
 
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,6 +28,10 @@ public class Main {
 
         String[] input = new String[] { "&lHello world!", "&cHello _world!", "Hello &c&obacon _world!_", "&c&lHello __world!" };
 
+        String[] args = new String[] { "hello", "world" };
+        List<String> temp = new ArrayList<String>();
+        temp.addAll(Arrays.asList(args));
+
         for (String str : input) {
 
             Matcher matcher = pattern.matcher(str);
@@ -37,6 +45,34 @@ public class Main {
 
         }
 
+    }
+
+    private static final List<String> prefixes = Arrays.asList("k", "m", "b", "t", "q", "Q", "s", "S", "o", "n", "d");
+
+    /**
+     * @param number The number to format
+     * @return The formatted number
+     */
+    public static String formatNumberShort(long number) {
+        int prefix = -1;
+        long num = number;
+        double length = Math.pow(10, (Long.toString(num).length() - 3));
+        long dec = num;
+        dec /= length;
+        dec *= length;
+        dec = num - dec;
+        dec *= 1000;
+        System.out.println(num + "," + dec);
+        while (num > 1000) {
+            num /= 1000;
+            dec /= 1000;
+            prefix++;
+        }
+        if (prefix > -1 && prefix < prefixes.size()) {
+            return num + "." + dec + prefixes.get(prefix);
+        } else {
+            return Long.toString(number);
+        }
     }
 
     /**
