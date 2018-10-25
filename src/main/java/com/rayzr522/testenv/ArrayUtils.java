@@ -19,7 +19,7 @@ public class ArrayUtils {
     }
 
     public static Integer[] fibonacci(int count) {
-        return generate(Integer.class, count, (i, a) -> i < 2 ? i : a[i - 1] + a[i - 2]);
+        return generate(Integer.class, count, (i, a) -> i < 2 ? 1 : a[i - 1] + a[i - 2]);
     }
 
     public static Integer[] range(int from, int to) {

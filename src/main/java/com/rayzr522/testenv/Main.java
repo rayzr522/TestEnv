@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
@@ -12,7 +13,7 @@ public class Main {
 
     public static final File FOLDER = new File("~/Desktop/Temp/");
     private File file;
-    private HashMap<String, String> props = new HashMap<String, String>();
+    private Map<String, String> props = new HashMap<String, String>();
 
     private Main() {
         log("Loading file...");
